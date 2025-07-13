@@ -16,7 +16,7 @@
       background-color: #2c3e50;
       color: #fff;
       text-align: center;
-      padding: 60px 20px 40px;
+      padding: 40px 20px 20px;
     }
 
     header h1 {
@@ -25,8 +25,52 @@
     }
 
     header p {
-      font-size: 1.2em;
-      color: #ddd;
+      font-size: 1.1em;
+      color: #ccc;
+    }
+
+    /* Dropdown Navigation */
+    nav.dropdown-nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      background-color: #1a252f;
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+    }
+
+    nav.dropdown-nav ul li {
+      position: relative;
+    }
+
+    nav.dropdown-nav ul li a {
+      display: block;
+      padding: 14px 20px;
+      color: white;
+      text-decoration: none;
+    }
+
+    nav.dropdown-nav ul li:hover {
+      background-color: #0d141a;
+    }
+
+    nav .dropdown-content {
+      display: none;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #1a252f;
+      min-width: 160px;
+      z-index: 1;
+    }
+
+    nav .dropdown-content li {
+      border-top: 1px solid #333;
+    }
+
+    nav .dropdown:hover .dropdown-content {
+      display: block;
     }
 
     .banner {
@@ -91,6 +135,14 @@
       .banner {
         max-height: 250px;
       }
+
+      nav.dropdown-nav ul {
+        flex-direction: column;
+      }
+
+      nav .dropdown-content {
+        position: static;
+      }
     }
   </style>
 </head>
@@ -101,9 +153,26 @@
     <p>Your Partner for High-Conversion Landing Pages</p>
   </header>
 
+  <nav class="dropdown-nav">
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li class="dropdown">
+        <a href="#">Services ▾</a>
+        <ul class="dropdown-content">
+          <li><a href="#services">Landing Pages</a></li>
+          <li><a href="#portfolio">Portfolio Sites</a></li>
+          <li><a href="#contact">Contact Pages</a></li>
+        </ul>
+      </li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#portfolio">Portfolio</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
   <img class="banner" src="banner.jpeg" alt="Banner Image">
 
-  <section>
+  <section id="services">
     <h2>Our Services</h2>
     <p>
       I design beautiful, responsive landing pages that convert visitors into customers. 
@@ -111,6 +180,40 @@
       Get a clean, professional online presence that works on any device.
     </p>
     <a class="cta" href="mailto:mykeloyaniran@gmail.com">Get Your Free Quote</a>
+  </section>
+
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi! I'm Sirmykeloy, a passionate web designer based in Nigeria. I help businesses grow 
+      by giving them an online presence that is modern, clean, and effective. I focus on 
+      creating landing pages that turn visitors into paying customers.
+    </p>
+  </section>
+
+  <section id="portfolio">
+    <h2>My Work</h2>
+    <p>Check out some of the landing pages I've designed:</p>
+    <img class="banner" src="sample1.jpg" alt="Sample Project 1">
+    <img class="banner" src="sample2.jpg" alt="Sample Project 2">
+  </section>
+
+  <section>
+    <h2>Testimonials</h2>
+    <p>
+      "Sirmykeloy did an amazing job. My business is now online and I'm getting real customers!" — Happy Client
+    </p>
+    <p>
+      "Professional, fast, and friendly. Highly recommended!" — Another Client
+    </p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>
+      Ready to work together? Let's talk!
+    </p>
+    <a class="cta" href="mailto:mykeloyaniran@gmail.com">Email Me Now</a>
   </section>
 
   <footer>
